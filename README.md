@@ -39,28 +39,39 @@ These metrics reflect the model's performance on a test set, demonstrating high 
 
 ## Project Structure
 
-shoplift_detect/
-├── manage.py              # Django management script
-├── best_model.keras       # Fine-tuned Keras model
-├── shoplift_detect/       # Project configuration
-│   ├── settings.py        # Configuration (e.g., media, static files)
-│   ├── urls.py            # URL routing
-│   └── ...
-├── detector/              # Application module
-│   ├── views.py           # Logic for video processing and prediction
-│   ├── urls.py            # App-specific URL routing
-│   └── ...
-├── templates/
-│   └── detector/
-│       └── index.html     # HTML template for the user interface
-├── static/
-│   └── detector/
-│       ├── css/
-│       │   └── style.css  # CSS for dark theme and layout
-│       └── images/
-│           ├── Gemini_Generated_Image1.png  # Header background image
-│           └── image2.jpg                   # "How to Use" illustration
-└── media/                 # Directory for uploaded video files
+## Project Structure
+
+Below is the organized structure of the Shoplifting Detection System project:
+
+| **Path**                          | **Description**                                      |
+|-----------------------------------|-----------------------------------------------------|
+| `shoplift_detect/`                | Project root directory                              |
+| ├── `manage.py`                   | Django management script (run with `python manage.py runserver`) |
+| ├── `best_model.keras`            | Fine-tuned Keras model file                         |
+| ├── `shoplift_detect/`            | Inner project configuration directory               |
+| │   ├── `settings.py`             | Configuration file (e.g., media, static settings)   |
+| │   ├── `urls.py`                 | Main URL routing configuration                     |
+| │   └── ...                       | Other auto-generated files (e.g., `wsgi.py`)        |
+| ├── `detector/`                   | Application module directory                        |
+| │   ├── `views.py`                | Logic for video processing and prediction           |
+| │   ├── `urls.py`                 | App-specific URL routing                            |
+| │   └── ...                       | Other auto-generated files (e.g., `apps.py`)        |
+| ├── `templates/`                  | Directory for HTML templates                        |
+| │   └── `detector/`               | App-specific template directory                     |
+| │       └── `index.html`          | Main HTML template for the user interface           |
+| ├── `static/`                     | Directory for static files (CSS, images)            |
+| │   └── `detector/`               | App-specific static files directory                 |
+| │       ├── `css/`                | CSS subdirectory                                    |
+| │       │   └── `style.css`       | CSS file for dark theme and layout                  |
+| │       └── `images/`             | Images subdirectory                                 |
+| │           ├── `Gemini_Generated_Image1.png` | Header background image       |
+| │           └── `image2.jpg`      | "How to Use" section illustration                   |
+| └── `media/`                      | Directory for uploaded video files (auto-created)   |
+
+### Notes
+- Ensure `best_model.keras`, `Gemini_Generated_Image1.png`, and `image2.jpg` are placed in their respective locations before running the project.
+- The `media/` folder is dynamically created when videos are uploaded.
+
 
 ## How it works
 
@@ -74,8 +85,8 @@ shoplift_detect/
 
 ## Project Sample
 
-<img width="1366" height="768" alt="Screenshot (1671)" src="https://github.com/user-attachments/assets/9c7d610a-df47-4431-b90c-d60aade4a5d6" />
+<img width="1366" height="665" alt="Screenshot (1671)" src="https://github.com/user-attachments/assets/30386054-c37d-4609-a9b1-349232c283cb" />
 
-<img width="1366" height="768" alt="Screenshot (1673)" src="https://github.com/user-attachments/assets/c52d2835-8115-4ac6-89fe-382e99232f12" />
+<img width="1366" height="669" alt="Screenshot (1673)" src="https://github.com/user-attachments/assets/05fc5d11-6d22-42a9-a41d-0091081b68d6" />
 
 <img width="1366" height="697" alt="Screenshot (1675)" src="https://github.com/user-attachments/assets/0824c2d5-dd48-4269-be56-3e2cb05a3f50" />
