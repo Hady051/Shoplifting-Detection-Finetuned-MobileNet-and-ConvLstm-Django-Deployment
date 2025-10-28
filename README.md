@@ -1,0 +1,1 @@
+# Shoplifting-Detection-Finetuned-MobileNet-and-ConvLstm-Django-Deployment
