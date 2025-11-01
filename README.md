@@ -121,4 +121,4 @@ Below is the organized structure of the Shoplifting Detection System project:
 
 <img width="1366" height="669" alt="Screenshot (1673)" src="https://github.com/user-attachments/assets/05fc5d11-6d22-42a9-a41d-0091081b68d6" />
 
-<img width="1366" height="697" alt="Screenshot (1675)" src="https://github.com/user-attachments/assets/0824c2d5-dd48-4269-be56-3e2cb05a3f50" />
+<img width="1366" height="686" alt="Screenshot (1676)" src="https://github.com/user-attachments/assets/390527c5-026e-4659-9fb1-a21745e77dfb" />
