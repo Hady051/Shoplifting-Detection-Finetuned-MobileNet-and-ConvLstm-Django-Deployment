@@ -1,0 +1,152 @@
+/* static/detector/css/style.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #121212; /* Dark background */
+    color: #ffffff; /* Bright text */
+}
+
+header {
+    background-image: url('../images/Gemini_Generated_Image1.png'); /* Header image */
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.header-content {
+    max-width: 800px;
+}
+
+h1 {
+    font-size: 3em;
+}
+
+main {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+.instructions {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    background-color: #1e1e1e; /* Darker section bg */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.instructions-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.instructions-text {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.instructions-image img {
+    max-width: 300px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.upload-section {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+button {
+    background-color: #004d40; /* Deep teal */
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #00332b; /* Darker teal */
+}
+
+#file-upload {
+    display: none;
+}
+
+.custom-file-upload {
+    display: inline-block;
+    padding: 12px 24px;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #004d40; /* Deep teal */
+    border-radius: 6px;
+    cursor: pointer;
+    margin-right: 20px;
+}
+
+.custom-file-upload:hover {
+    background-color: #00332b;
+}
+
+#file-chosen {
+    margin-left: 10px;
+    margin-right: 50px;
+    font-style: italic;
+    color: #cccccc; /* Light gray for secondary text */
+}
+
+.flash-messages {
+    list-style: none;
+    padding: 0;
+    color: #ff5252; /* Red for errors */
+}
+
+.results-section {
+    background-color: #1e1e1e;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.results-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.video-box, .prediction-box {
+    text-align: center;
+    margin: 10px;
+}
+
+.video-box video {
+    max-width: 400px;
+    border: 2px solid #333333;
+    border-radius: 5px;
+}
+
+.prediction-box p {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+footer {
+    text-align: center;
+    padding: 4px;
+    background-color: #004d40; /* Deep teal */
+    color: #ffffff;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
