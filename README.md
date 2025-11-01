@@ -13,7 +13,7 @@ This application allows users to upload video files (e.g., MP4, AVI). The system
 - **Real-time Prediction**: Uses a fine-tuned deep learning model to analyze video content.
 - **User Interface**: Displays the uploaded video and prediction side-by-side in a dark-themed, responsive design.
 
-## Model Details
+## Model Details- Version 3 (1-cnn-convlstmrnn-shopliftdet-pretrained-mobilenet.ipynb)
 
 The detection model is based on a **pre-trained MobileNetV2** backbone, enhanced with **ConvLSTM layers** for temporal modeling of video frames. The model was fine-tuned on a custom dataset of shoplifting and non-shoplifting videos.
 
@@ -23,7 +23,41 @@ The detection model is based on a **pre-trained MobileNetV2** backbone, enhanced
 - **Recall**: 0.9298
 - **F1-Score**: 0.9296
 
+---
+
+## Model Details- Version 4 (1-shopliftdet-mobilenet-convlstm-load-memory.ipynb) (best version)
+
+The detection model is based on a **pre-trained MobileNetV2** backbone, enhanced with **ConvLSTM layers** for temporal modeling of video frames. The model was fine-tuned on a custom dataset of shoplifting and non-shoplifting videos.
+
+**I made the same architecture but changed the hyperparameters of the input to:**
+
+* **Frame size: (72, 72)** instead of (64, 64)
+* **NUM_FRAMES: 45** instead of 40
+
+**This was possible because of the videos I skipped loading into memory in the next part.**
+
+### Compating Data Leakage
+
+I added a couple of functions to detect similar videos using `cosine similarity` and pair them with `similarity threshold= 1.0` , previewing a couple of the video paths to check them manually if they are identical or not. I then **skipped loading a pair of the similar videos**.
+
+**This ensured no data leakage occurring when splittting the data**.
+
+**I also changed `predict_video_from_dataset()` which is used to predict and show the video, as I forgot to convert to `RGB` in it. When trying it, it lead the model predicting all videos to be non-shoplifters**
+
+<img width="1389" height="490" alt="__results___122_0" src="https://github.com/user-attachments/assets/aeacd016-e24c-4d19-9977-179daba766a1" />
+
+- **Train Accuracy**: 0.8488
+- **Validation Accuracy**: 0.9913
+
+### Model Evaluation Metrics on test set
+- **Accuracy**: 1.0000
+- **Precision**: 1.0000
+- **Recall**: 1.0000
+- **F1-Score**: 1.0000
+
 These metrics reflect the model's performance on a test set, demonstrating high reliability in distinguishing shoplifting incidents.
+
+---
 
 ## Technologies Used
 
@@ -36,8 +70,6 @@ These metrics reflect the model's performance on a test set, demonstrating high 
 - **Dependencies**: NumPy for numerical operations.
 
 ---
-
-## Project Structure
 
 ## Project Structure
 
